@@ -10,25 +10,50 @@ function Reactions() {
     const [mz, setMz] = useState(false);
 
     
+    //keep track of the checkboxes
+    const handleCheckBox = (e) => {
+        switch(e.target.id){
+            case 'fx':
+                setFx(e.target.checked)
+                break;
+            case 'fy':
+                setFy(e.target.checked)
+                break;
+            case 'fz':
+                setFz(e.target.checked)
+                break;
+            case 'mx':
+                setMx(e.target.checked)
+                break;
+            case 'my':
+                setMy(e.target.checked)
+                break;
+            case 'mz':
+                setMz(e.target.checked)
+                break;
+        }
+        console.log([fx,fy,fz,mx,my,mz])
+    }
+
 
 
     return(
         <div>
             <form action="submit">
                 <div class='column'>
-                    <input type="checkbox" id="fx" name='fx'/>
+                    <input onChange={handleCheckBox} type="checkbox" id="fx" name='fx'/>
                     <label for='fy'>Fy</label>
-                    <input type="checkbox" id="fy" name='fy'/>
+                    <input onChange={handleCheckBox} type="checkbox" id="fy" name='fy'/>
                     <label for='fz'>Fz</label>
-                    <input type="checkbox" id="fz" name='fz'/>
+                    <input onChange={handleCheckBox} type="checkbox" id="fz" name='fz'/>
                     <label for='mx'>Mx</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="mx" name='mx'/>
+                    <input onChange={handleCheckBox} type="checkbox" id="mx" name='mx'/>
                     <label for='my'>My</label>
-                    <input type="checkbox" id="my" name='my'/>
+                    <input onChange={handleCheckBox}type="checkbox" id="my" name='my'/>
                     <label for='fx'>Fx</label>
-                    <input type="checkbox" id="fz" name='fx'/>
+                    <input onChange={handleCheckBox}type="checkbox" id="fz" name='fx'/>
                     <label for='fx'>Fx</label>
                 </div>
 

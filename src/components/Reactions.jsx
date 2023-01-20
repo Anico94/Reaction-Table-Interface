@@ -32,6 +32,10 @@ function Reactions() {
                 setMz(e.target.checked)
                 break;
         }
+    }
+
+    const selectedReactions = (e) => {
+        e.preventDefault()
         console.log([fx,fy,fz,mx,my,mz])
     }
 
@@ -57,7 +61,7 @@ function Reactions() {
                     <label for='fx'>Fx</label>
                 </div>
 
-                <button type='submit'>Generate Table</button>
+                <button onClick={selectedReactions} type='submit'>Generate Table</button>
                 
             </form>
         </div>

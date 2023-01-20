@@ -2,7 +2,12 @@ import React, { useState } from "react";
 
 function Reactions() {
 
-    const [fx, setFx] = useState(true);
+    const [fx, setFx] = useState(false);
+    const [fy, setFy] = useState(false);
+    const [fz, setFz] = useState(false);
+    const [mx, setMx] = useState(false);
+    const [my, setMy] = useState(false);
+    const [mz, setMz] = useState(false);
 
     
 
@@ -23,9 +28,11 @@ function Reactions() {
                     <label for='my'>My</label>
                     <input type="checkbox" id="my" name='my'/>
                     <label for='fx'>Fx</label>
-                    <input type="checkbox" id="fx" name='fx'/>
+                    <input type="checkbox" id="fz" name='fx'/>
                     <label for='fx'>Fx</label>
                 </div>
+
+                <button type='submit'>Generate Table</button>
                 
             </form>
         </div>
